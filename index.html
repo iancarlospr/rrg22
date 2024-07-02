@@ -3,165 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RealEstate Management</title>
+    <title>High-Quality Renovations and Conversions</title>
     <style>
-        /* CSS Reset and Base Styles */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
         }
         body {
-            font-family: Arial, sans-serif;
+            background-color: #111;
+            color: #fff;
             line-height: 1.6;
-            color: #333;
         }
-        /* Mobile-first styles */
         .container {
-            width: 90%;
-            margin: auto;
-            overflow: hidden;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
         header {
-            background: #f4f4f4;
-            padding: 1rem 0;
-        }
-        nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 20px 0;
         }
         .logo {
-            font-size: 1.5rem;
+            font-size: 24px;
             font-weight: bold;
-            color: #333;
         }
-        .nav-links {
-            display: none;
-        }
-        .hero {
-            background: #f9f9f9;
-            padding: 2rem 0;
-            text-align: center;
-        }
-        .hero h1 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-        .hero p {
-            font-size: 1rem;
-            margin-bottom: 1rem;
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 20px;
         }
         .cta-button {
-            display: inline-block;
-            background: #007bff;
-            color: #fff;
-            padding: 0.5rem 1rem;
-            text-decoration: none;
+            background-color: #8EB50B;
+            color: #111;
+            padding: 10px 20px;
+            border: none;
             border-radius: 5px;
+            cursor: pointer;
         }
-        .features {
-            padding: 2rem 0;
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 80vh;
         }
-        .feature {
-            background: #fff;
-            padding: 1rem;
-            margin-bottom: 1rem;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        .hero-content {
+            flex: 1;
         }
-        .feature h2 {
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
         }
-        footer {
-            background: #333;
-            color: #fff;
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #aaa;
+        }
+        .scroll-down {
+            margin-top: 40px;
+            color: #8EB50B;
+        }
+        .steps {
+            margin-top: 100px;
+        }
+        .steps h2 {
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+        .step {
+            background-color: #222;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+        .step h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .step p {
+            color: #aaa;
+        }
+        .mission {
+            margin-top: 100px;
             text-align: center;
-            padding: 1rem 0;
         }
-        /* Tablet and Desktop styles */
-        @media (min-width: 768px) {
-            .nav-links {
-                display: flex;
-            }
-            .nav-links a {
-                color: #333;
-                text-decoration: none;
-                margin-left: 1rem;
-            }
+        .mission h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .social-icons {
+            position: fixed;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .social-icons a {
+            display: block;
+            margin: 10px 0;
+            color: #fff;
+            text-decoration: none;
+        }
+        @media (max-width: 768px) {
             .hero {
-                text-align: left;
-                display: flex;
-                align-items: center;
-            }
-            .hero-content {
-                width: 50%;
-            }
-            .hero-image {
-                width: 50%;
+                flex-direction: column;
+                text-align: center;
             }
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: 36px;
             }
-            .features {
-                display: flex;
-                justify-content: space-between;
-            }
-            .feature {
-                width: 30%;
+            .social-icons {
+                display: none;
             }
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
+    <div class="container">
+        <header>
+            <div class="logo">★</div>
             <nav>
-                <div class="logo">RealEstate Management</div>
-                <div class="nav-links">
-                    <a href="#home">Home</a>
-                    <a href="#features">Features</a>
-                    <a href="#contact">Contact</a>
-                </div>
+                <a href="#home">Home</a>
+                <a href="#works">How It Works</a>
+                <a href="#about">About Us</a>
             </nav>
-        </div>
-    </header>
+            <button class="cta-button">Get in Touch</button>
+        </header>
 
-    <section class="hero" id="home">
-        <div class="container">
+        <section class="hero" id="home">
             <div class="hero-content">
-                <h1>Effortless Apartment Rentals</h1>
-                <p>Manage your real estate properties with ease. Find tenants, collect rent, and handle maintenance all in one place.</p>
-                <a href="#contact" class="cta-button">Get Started</a>
+                <h1>High-Quality Renovations And Conversions</h1>
+                <p>Implemented stress-free for you which thanks to our creativity and experience will meet your requirements.</p>
+                <div class="scroll-down">Scroll for More ▼</div>
             </div>
-            <div class="hero-image">
-                <img src="https://via.placeholder.com/400x300" alt="Apartment building" style="max-width: 100%; height: auto;">
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="features" id="features">
-        <div class="container">
-            <div class="feature">
-                <h2>Easy Listing</h2>
-                <p>Create attractive listings for your apartments with just a few clicks.</p>
+        <section class="steps" id="works">
+            <h2>3 Simple Steps To Your Renovated / Converted Property</h2>
+            <div class="step">
+                <h3>1. Property Analysis & Project Planning</h3>
+                <p>Evaluation of the construction and project scope to create a comprehensive plan.</p>
             </div>
-            <div class="feature">
-                <h2>Tenant Screening</h2>
-                <p>Find reliable tenants with our comprehensive screening process.</p>
+            <div class="step">
+                <h3>2. Construction Preparation & Works</h3>
+                <p>Our experienced team handles all aspects of the renovation process.</p>
             </div>
-            <div class="feature">
-                <h2>Maintenance Tracking</h2>
-                <p>Keep your properties in top shape with our maintenance management tools.</p>
+            <div class="step">
+                <h3>3. Final Inspection & Interior Design</h3>
+                <p>Ensuring quality standards are met and adding finishing touches.</p>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <footer id="contact">
-        <div class="container">
-            <p>Contact us: info@realestatemanagement.com | (123) 456-7890</p>
-        </div>
-    </footer>
+        <section class="mission" id="about">
+            <h2>Get To Know Us</h2>
+            <h3>OUR MISSION</h3>
+            <!-- Add mission content here -->
+        </section>
+    </div>
+
+    <div class="social-icons">
+        <a href="#">FB</a>
+        <a href="#">IN</a>
+        <a href="#">TW</a>
+    </div>
 </body>
 </html>

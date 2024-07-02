@@ -26,6 +26,11 @@
             justify-content: space-between;
             align-items: center;
             padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            background-color: rgba(17, 17, 17, 0.9);
+            z-index: 1000;
         }
         .logo {
             font-size: 24px;
@@ -45,13 +50,25 @@
             cursor: pointer;
         }
         .hero {
+            height: 100vh;
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            min-height: 80vh;
+            background: url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+            position: relative;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
         }
         .hero-content {
-            flex: 1;
+            position: relative;
+            z-index: 1;
+            padding: 0 20px;
         }
         .hero h1 {
             font-size: 48px;
@@ -60,113 +77,147 @@
         .hero p {
             font-size: 18px;
             margin-bottom: 30px;
-            color: #aaa;
+            color: #ddd;
         }
-        .scroll-down {
-            margin-top: 40px;
-            color: #8EB50B;
-        }
-        .steps {
-            margin-top: 100px;
-        }
-        .steps h2 {
+        .section-title {
             font-size: 36px;
             margin-bottom: 40px;
+            text-align: center;
+            padding-top: 80px;
         }
-        .step {
-            background-color: #222;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 10px;
-        }
-        .step h3 {
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-        .step p {
-            color: #aaa;
-        }
-        .mission {
-            margin-top: 100px;
+        .property {
+            padding: 80px 0;
             text-align: center;
         }
-        .mission h2 {
-            font-size: 36px;
+        .video-placeholder {
+            width: 100%;
+            max-width: 800px;
+            height: 450px;
+            background-color: #333;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: #666;
+        }
+        .about-us {
+            padding: 80px 0;
+            background-color: #222;
+        }
+        .about-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .about-text {
+            flex: 1;
+            padding-right: 40px;
+        }
+        .about-image {
+            flex: 1;
+            height: 300px;
+            background: url('https://via.placeholder.com/600x300') no-repeat center center/cover;
+        }
+        .contact {
+            padding: 80px 0;
+        }
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .form-group {
             margin-bottom: 20px;
         }
-        .social-icons {
-            position: fixed;
-            right: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-        .social-icons a {
+        .form-group label {
             display: block;
-            margin: 10px 0;
+            margin-bottom: 5px;
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            background-color: #333;
+            border: none;
             color: #fff;
-            text-decoration: none;
+        }
+        .form-group textarea {
+            height: 150px;
         }
         @media (max-width: 768px) {
-            .hero {
-                flex-direction: column;
-                text-align: center;
-            }
             .hero h1 {
                 font-size: 36px;
             }
-            .social-icons {
-                display: none;
+            .about-content {
+                flex-direction: column;
+            }
+            .about-text {
+                padding-right: 0;
+                margin-bottom: 40px;
             }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
+    <header>
+        <div class="container">
             <div class="logo">★</div>
             <nav>
                 <a href="#home">Home</a>
-                <a href="#works">How It Works</a>
+                <a href="#property">Our Property</a>
                 <a href="#about">About Us</a>
+                <a href="#contact">Contact</a>
             </nav>
-            <button class="cta-button">Get in Touch</button>
-        </header>
+        </div>
+    </header>
 
-        <section class="hero" id="home">
-            <div class="hero-content">
-                <h1>High-Quality Renovations And Conversions</h1>
-                <p>Implemented stress-free for you which thanks to our creativity and experience will meet your requirements.</p>
-                <div class="scroll-down">Scroll for More ▼</div>
-            </div>
-        </section>
+    <section class="hero" id="home">
+        <div class="hero-content container">
+            <h1>High-Quality Renovations And Conversions</h1>
+            <p>Implemented stress-free for you which thanks to our creativity and experience will meet your requirements.</p>
+            <button class="cta-button">Get Started</button>
+        </div>
+    </section>
 
-        <section class="steps" id="works">
-            <h2>3 Simple Steps To Your Renovated / Converted Property</h2>
-            <div class="step">
-                <h3>1. Property Analysis & Project Planning</h3>
-                <p>Evaluation of the construction and project scope to create a comprehensive plan.</p>
-            </div>
-            <div class="step">
-                <h3>2. Construction Preparation & Works</h3>
-                <p>Our experienced team handles all aspects of the renovation process.</p>
-            </div>
-            <div class="step">
-                <h3>3. Final Inspection & Interior Design</h3>
-                <p>Ensuring quality standards are met and adding finishing touches.</p>
-            </div>
-        </section>
+    <section class="property" id="property">
+        <div class="container">
+            <h2 class="section-title">Our Property</h2>
+            <div class="video-placeholder">Video Placeholder</div>
+        </div>
+    </section>
 
-        <section class="mission" id="about">
-            <h2>Get To Know Us</h2>
-            <h3>OUR MISSION</h3>
-            <!-- Add mission content here -->
-        </section>
-    </div>
+    <section class="about-us" id="about">
+        <div class="container">
+            <h2 class="section-title">Get to Know Us</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>We are a team of experienced professionals dedicated to providing high-quality renovations and conversions. Our mission is to transform properties into stunning spaces that exceed our clients' expectations.</p>
+                    <p>With years of experience in the industry, we bring creativity, expertise, and attention to detail to every project we undertake.</p>
+                </div>
+                <div class="about-image"></div>
+            </div>
+        </div>
+    </section>
 
-    <div class="social-icons">
-        <a href="#">FB</a>
-        <a href="#">IN</a>
-        <a href="#">TW</a>
-    </div>
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="cta-button">Send Message</button>
+            </form>
+        </div>
+    </section>
 </body>
 </html>
